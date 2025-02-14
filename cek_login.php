@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verifikasi password
         if (password_verify($password, $user['password'])) {
             $_SESSION['email'] = $email;
-            header("Location: Ardui.php"); // Redirect ke dashboard setelah login berhasil
+            header("Location: Ardui.html"); // Redirect ke dashboard setelah login berhasil
             exit();
         } else {
             echo "Login gagal! Password salah.";
