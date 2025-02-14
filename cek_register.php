@@ -2,7 +2,7 @@
 include 'cek_koneksi.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
+    $email = $_POST['email1'];
     $password = password_hash($_POST['password1'], PASSWORD_DEFAULT); // Enkripsi password
     $confirm_pass = password_hash($_POST['password2'], PASSWORD_DEFAULT);
 
@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Cek apakah password dan konfirmasi password cocok
     if ($password !== $confirm_pass) {
     // Redirect kembali ke halaman registrasi dengan pesan error
-    header("location:Registers.php?pesan=gagal");
+    header("location:index.html?pesan=gagal");
     exit();
 }
 
