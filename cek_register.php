@@ -3,7 +3,7 @@ include 'cek_koneksi.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Enkripsi password
+    $password = password_hash($_POST['password1'], PASSWORD_DEFAULT); // Enkripsi password
     $confirm_pass = password_hash($_POST['password2'], PASSWORD_DEFAULT);
 
 
