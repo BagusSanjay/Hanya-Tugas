@@ -1,11 +1,13 @@
 <?php
-// Koneksi ke database
-$servername = "sql101.infinityfree.com";
-$username = "if0_38292235";
-$password = "Bagussss"; 
-$dbname = "f0_38292235_users";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$host = getenv("MYSQL_HOST");
+$username = getenv("MYSQL_USER");
+$password = getenv("MYSQL_PASSWORD");
+$dbname = getenv("MYSQL_DATABASE");
+$port = getenv("MYSQL_PORT");
+
+
+$conn = new mysqli($servername, $username, $password, $dbname, $port);
 
 // Cek koneksi
 if ($conn->connect_error) {
