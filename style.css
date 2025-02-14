@@ -340,9 +340,9 @@ form.sign-up-form {
   }
 }
 /* Tambahkan Media Query untuk layar kecil (mobile) */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 420px) {
   .container {
-    min-height: 220vh;
+    min-height: 300vh;
     padding: 0 1rem;
     display: flex;
     align-items: center;
@@ -368,7 +368,7 @@ form.sign-up-form {
 
   .forms-container {
     position: relative;
-    width: 100%;
+    width: 10%;
     height: auto;
     top: initial;
     left: initial;
